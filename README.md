@@ -1,7 +1,7 @@
 # Payments_Matcher_Pro
 This project is a Python script for matching bank payments to the invoice list (in this case property rental Invoice List), using various matching strategies. It reads payment and invoice data from CSV files and outputs the matched results in new CSV files.
 
-# Python Bank Payments and Invoices Matching
+## Python Bank Payments and Invoices Matching
 
 This project is a Python script for matching bank payments to property invoices using various matching strategies. It reads payment and invoice data from CSV files and outputs the matched results in new CSV files.
 
@@ -21,6 +21,4 @@ This project is a Python script for matching bank payments to property invoices 
 1. Place your payment and invoice datasets in the Datasets folder.
 2. Run the script:
 3. python payment_matching.py
-
-
-3. Check the output files in the Datasets folder for the matched results.
+4. Check the output files in the Datasets folder for the matched results.
