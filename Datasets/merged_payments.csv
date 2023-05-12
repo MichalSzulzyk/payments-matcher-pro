@@ -1,0 +1,13 @@
+Unique Change Code,Payment Date,Account Number,Payment Name,Name and Surname,Adreess,Payed Amount,Transaction Number,Merged
+1001_Unchanged,2022-11-22,DE86123456780098765432,41/11/2022_InHouse_GmbH,Hannah Schneider,"Romerstrasse 1/12, Munich",2222.59,3098574162,"Correct Amount, Payment data ok"
+1002_PN,2023-01-16,DE44123456780123456789,521909,Emma Johnson,"Kaiserstrasse 26, Frankfurt",694.98,7809234561,"Correct Amount, Payment data ok"
+1003_Adr_PA,2023-01-20,DE32123456780987654321,81/01/2023_InHouse_GmbH,Hannah Koch,"Steindamm 1, Hamburg",1300.0,4561892730,"Wrong Amount, Payment data ok"
+1004_PN_Adr,2023-01-15,DE78123456780234567890,"Client 465838,  Invoice Number 586232",Ava Davis,"Hardenbergstrasse 12, Berlin",1053.74,1287365490,"Correct Amount, Payment data ok"
+1005_PN_Adr,2022-12-28,DE92123456780123456789,Wohnung Payment December,Lena Schulz,"Viktualienmarkt 6, Munich",335.31,9012837645,"Correct Amount, but only Name and Surname Match"
+1007_PN_NS_Adr,2023-01-10,DE49123456780098765432,Payment,Don Johnson,"Theodor-Heuss-Allee 50, Frankfurt",418.24,5678901234,"Amount Correct, Data Wrong !"
+1008_PN_NS_Adr_PA,2022-11-05,DE71123456780123456789,Elbchaussee 401 ,Ian Write,"Isartorplatz 8, Munich",1300.05,4321890657,"Address Match, but Check VALUE !"
+1009_Unchanged,2022-10-06,DE66123456780987654321,39/11/2022_InHouse_GmbH,Sophia Monk,"Friedrich-Ebert-Anlage 49, Berlin",2573.19,9876543210,"Correct Amount, Payment data ok"
+1010_PN_Adr,2022-12-10,DE19123456780234567890,68/12/2022_InHouse_GmbH 249503,Charlotte Weber,"Isartorplatz 8, Munich",1142.03,3412765980,"Correct Amount, Payment data ok"
+1011_PN_Adr,2023-01-20,DE93123456780123456789,99/01/2029,Olivia Martinez,"Gansemarkt 45, Hamburg",1923.19,7823419056,"Correct Amount, but only Name and Surname Match"
+1012_PN_Adr,2022-11-26,DE49123456780989054321,Sophie Thruman,Sophie Thruman,"Rothenstrasse 5, Hamburg",697.86,4145621430,"Correct Amount, but only Name and Surname Match"
+1013_PN_NS_Adr_PA,2022-11-26,DE49123456789999054321,Oranges,Nick West,"5tgh Avenue,  New York, USA",100080.0,9990621430,Wrong Transfer
