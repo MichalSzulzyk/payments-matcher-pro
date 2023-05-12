@@ -9,6 +9,9 @@ def match_payments_invoices(payments, invoices):
     invoices['Transaction Number'] = 0
     invoices['Matched With'] = "Not Matched"
 
+    # # To be deleted (Only for synthetic data)
+    payments = payments.sample(frac=1, random_state=42).reset_index(drop=True)
+
     # Define separators for payment names
     separators = [',', ';', ' ', '_']
 
