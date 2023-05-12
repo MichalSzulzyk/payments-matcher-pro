@@ -20,5 +20,5 @@ This project is a Python script for matching bank payments to property invoices 
 
 1. Place your payment and invoice datasets in the Datasets folder.
 2. Run the script:
-3. python payment_matching.py
+3. python matching_algorithms.py
 4. Check the output files in the Datasets folder for the matched results.
