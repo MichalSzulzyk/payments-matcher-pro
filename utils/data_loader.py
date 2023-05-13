@@ -1,4 +1,5 @@
 import pandas as pd
+from decimal import Decimal
 
 def load_payments(file_path):
     ''' 
