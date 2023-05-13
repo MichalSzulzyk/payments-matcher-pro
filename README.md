@@ -93,8 +93,12 @@ It reads payment and invoice data from CSV files and outputs the matched results
 ## Usage
 
 1. Place your payment and invoice .csv datasets in the Datasets folder.
+
+**PAYMENTS**
 ![payment!](readme-image/payments-image.png)
 
+
+**INVOICES**
 ![invoice!](readme-image/invoice_dB-image.png)
 
 3. Run the script:
@@ -107,3 +111,12 @@ It reads payment and invoice data from CSV files and outputs the matched results
 2. Run the script:
 3. python matching_algorithms.py
 4. Check the output files in the Datasets folder for the matched results.
+
+**RESULTS:*
+
+**MERGED PAYMENTS**
+![payment!](readme-image/payments_merged.png)
+
+
+**MERGED INVOICES**
+![payment!](readme-image/invoices_merged.png)   
