@@ -2,24 +2,6 @@
 This project is a Python script for matching bank payments to the invoice list (in this case property rental Invoice List), using various matching strategies. It reads payment and invoice data from CSV files and outputs the matched results in new CSV files.
 These are the potential scenarios considered in the code:
 
-## Python Bank Payments and Invoices Matching
-
-This project is a Python script for matching bank payments to property invoices using various matching strategies. It reads payment and invoice data from CSV files and outputs the matched results in new CSV files.
-
-## Dependencies
-
-- pandas
-- jellyfish
-
-## Installation
-
-1. Clone the repository.
-2. Install the required dependencies:
-3. pip install pandas jellyfish
-# Payments Matcher Pro
-This project is a Python script for matching bank payments to the invoice list (in this case property rental Invoice List), using various matching strategies. It reads payment and invoice data from CSV files and outputs the matched results in new CSV files.
-These are the potential scenarios considered in the code:
-
 **Scenarios in the code:** <br>
 
 Payment ACCEPTED <br>
