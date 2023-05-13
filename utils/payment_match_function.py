@@ -8,6 +8,7 @@ def match_payments_invoices(payments, invoices):
     payments['Merged'] = "Not Merged"
     invoices['Transaction Number'] = 0
     invoices['Matched With'] = "Not Matched"
+    invoices['Status'] = "Not Matched"
 
     # # To be deleted (Only for synthetic data)
     payments = payments.sample(frac=1, random_state=42).reset_index(drop=True)
@@ -37,6 +38,8 @@ def match_payments_invoices(payments, invoices):
                     for num in nums_to_check:
                         if num in payment_name_list and payment['Payed Amount'] == invoice['Payment Amount']:
                             invoices.at[j, "Matched With"] = payment['Unique Change Code']
+                            invoices.at[j, 'Transaction Number'] = payment['Transaction Number']
+                            invoices.at[j, 'Status'] = "ACCEPTED"
                             payments.at[i, "Merged"] = "Correct Amount, Payment data ok"
                             break
 
@@ -44,6 +47,8 @@ def match_payments_invoices(payments, invoices):
                     # in the Payment Name but payment amount is wrong
                         elif num in payment_name_list and payment['Payed Amount'] != invoice['Payment Amount']:
                             invoices.at[j, "Matched With"] = payment['Unique Change Code']
+                            invoices.at[j, 'Transaction Number'] = payment['Transaction Number']
+                            invoices.at[j, 'Status'] = "TO BE CHECKED"
                             payments.at[i, "Merged"] = "Wrong Amount, Payment data ok"
                             break
 
@@ -55,6 +60,8 @@ def match_payments_invoices(payments, invoices):
 
                     if payment['Name and Surname'] == invoice['Name and Surname'] and payment['Payed Amount'] == invoice['Payment Amount']:
                         invoices.at[j, "Matched With"] = payment['Unique Change Code']   
+                        invoices.at[j, 'Transaction Number'] = payment['Transaction Number']
+                        invoices.at[j, 'Status'] = "ACCEPTED"
                         payments.at[i, "Merged"] = "Correct Amount, but only Name and Surname Match"
                         break
                     
@@ -78,9 +85,13 @@ def match_payments_invoices(payments, invoices):
         i, j = best_match
         if payments['Payed Amount'][i] == invoices['Payment Amount'][j]:
             invoices.at[j, "Matched With"] = payments['Unique Change Code'][i]
+            invoices.at[j, 'Transaction Number'] = payment['Transaction Number']
+            invoices.at[j, 'Status'] = "ACCEPTED"
             payments.at[i, "Merged"] = "Similar Address, Amount Ok"
         else:
             invoices.at[j, "Matched With"] = payments['Unique Change Code'][i]
+            invoices.at[j, 'Transaction Number'] = payment['Transaction Number']
+            invoices.at[j, 'Status'] = "TO BE CHECKED"
             payments.at[i, "Merged"] = "Address Match, but Check VALUE !"
 
 
@@ -92,6 +103,8 @@ def match_payments_invoices(payments, invoices):
                 if invoice['Matched With'] == "Not Matched":
                     if payment['Payed Amount'] == invoice['Payment Amount']:
                         invoices.at[j, "Matched With"] = payments['Unique Change Code'][i]
+                        invoices.at[j, 'Transaction Number'] = payment['Transaction Number']
+                        invoices.at[j, 'Status'] = "TO BE CHECKED"
                         payments.at[i, "Merged"] = "Amount Correct, Data Wrong !"
                         break
 
@@ -99,6 +112,8 @@ def match_payments_invoices(payments, invoices):
 
                     elif payment['Payed Amount'] != invoice['Payment Amount']:
                         invoices.at[j, "Matched With"] = payments['Unique Change Code'][i]
+                        invoices.at[j, 'Transaction Number'] = payment['Transaction Number']
+                        invoices.at[j, 'Status'] = "TO BE CHECKED"
                         payments.at[i, "Merged"] = "Wrong Transfer"
                         break   
 
