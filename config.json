@@ -1,8 +1,0 @@
-{
-    "payments_file_path": "Datasets/Bank_Payments.csv",
-    "invoices_file_path": "Datasets/Property_DB_Invoices.csv",
-    "output_payments_file_path": "Datasets/merged_payments.csv",
-    "output_invoices_file_path": "Datasets/matched_invoices.csv",
-    "levenshtein_distance_threshold": 0.6
-  }
-  

@@ -1,5 +1,5 @@
-from data_loader import load_payments, load_invoices
-from payment_match_function import match_payments_invoices
+from utils.data_loader import load_payments, load_invoices
+from utils.payment_match_function import match_payments_invoices
 
 def main():
     payments = load_payments("Datasets/Bank_Payments.csv")

@@ -1,6 +1,6 @@
 import re
-from text_spliting_function import split
-from string_similarity import get_similarity
+from utils.text_splitting_function import split
+from utils.string_similarity import get_similarity
 
 def match_payments_invoices(payments, invoices):
 
