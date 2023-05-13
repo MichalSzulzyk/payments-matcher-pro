@@ -85,7 +85,7 @@ It reads payment and invoice data from CSV files and outputs the matched results
 3. python matching_algorithms.py
 4. Check the output files in the Datasets folder for the matched results.
 
-**RESULTS:*
+**RESULTS:**
 
 **MERGED PAYMENTS**
 ![payment!](readme-image/payments_merged.png)
